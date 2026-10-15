@@ -7,43 +7,69 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <Spinner
-        android:id="@+id/spinner"
-        android:layout_width="410dp"
-        android:layout_height="57dp"
-        android:spinnerMode="dropdown"
+
+    <Button
+        android:id="@+id/btnServidor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="39dp"
+        android:text="Soy servidor"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewMensaje" />
+
+    <Button
+        android:id="@+id/btnCliente"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="36dp"
+        android:text="Soy cliente"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnServidor" />
+
+    <TextView
+        android:id="@+id/textViewMensaje"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="138dp"
+        android:layout_marginTop="41dp"
+        android:text="Esperando mensaje..."
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/imgPokemon"
-        android:layout_width="198dp"
-        android:layout_height="208dp"
-        android:layout_marginStart="106dp"
-        android:layout_marginTop="87dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/spinner"
-        tools:srcCompat="@drawable/meowth" />
-
-    <TextView
-        android:id="@+id/txtPokemon"
+        android:id="@+id/imageView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="35dp"
-        android:text="Meowth"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="204dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imgPokemon" />
+        app:layout_constraintTop_toBottomOf="@+id/btnCliente"
+        app:srcCompat="@drawable/omero" />
 
     <Button
-        android:id="@+id/btnAplicar"
+        android:id="@+id/btnContar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="160dp"
-        android:layout_marginTop="69dp"
-        android:text="Button"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtPokemon" />
+        android:text="+1"
+        tools:layout_editor_absoluteX="278dp"
+        tools:layout_editor_absoluteY="222dp" />
+
+    <TextView
+        android:id="@+id/txtCountServer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="contador serv"
+        tools:layout_editor_absoluteX="273dp"
+        tools:layout_editor_absoluteY="147dp" />
+
+    <TextView
+        android:id="@+id/txtCountClient"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="contador client"
+        tools:layout_editor_absoluteX="273dp"
+        tools:layout_editor_absoluteY="184dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
